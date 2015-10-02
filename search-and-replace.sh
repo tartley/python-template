@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-USAGE = "\
+USAGE="\
 Usage: $0 <search> <replace>
 
 Search-and-replace in all files under current directory (recursively)
