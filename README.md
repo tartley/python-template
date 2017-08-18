@@ -26,7 +26,7 @@ test_main.py could create and use this executable instead of calling main()
 in-process?
 
 --version should also output the Python version, whether it's running
-frozen or not, whether doctrings are optimised away, whether __debug__ is on.
+frozen or not, whether optimisation is on, whether __debug__ is on.
 
 Use it to create a standalone 'flash' program that doodles on the terminal
 until a key is pressed.
