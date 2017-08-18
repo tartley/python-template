@@ -6,16 +6,19 @@ import re
 
 from setuptools import setup, find_packages
 
-# setup.py should not import non-stdlib modules, other than setuptools, at
-# module level, since this requires them to be installed to run any setup.py
-# command. (e.g. 'setup.py install' should not require installing py2exe.)
+# DON'T IMPORT non-stdlib modules, other than setuptools, at module level,
+# since this requires them to be installed to run any setup.py command. (e.g.
+# 'setup.py install' should not require installing py2exe.)
 
-# setup.py should not import from our local source (pip needs to be able to
-# import setup.py before our dependencies have been installed)
-
+# DON'T IMPORT from our local source, since pip needs to be able to import
+# setup.py before our dependencies have been installed.
 
 NAME = 'PROJNAME'
 
+# Library dependencies, as loosely pinned as possible:
+# Install with `pip install -e ."
+INSTALL_REQUIRES = [
+]
 
 def read_description(filename):
     '''
@@ -83,11 +86,8 @@ def get_sdist_config():
             'console_scripts': ['{0} = {0}.__main__:main'.format(NAME)],
             'gui_scripts': [],
         },
-        # Application dependencies, pinned:
-        install_requires=[
-            'docopt==0.6.1'
-        ],
-        packages=find_packages(exclude=('*.tests',)),
+        install_requires=INSTALL_REQUIRES,
+        packages=find_packages(exclude=['*.tests']),
         #include_package_data=True,
         #package_data={
             #'package.subpackage': ['globs'],

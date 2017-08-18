@@ -1,7 +1,9 @@
-# This Makefile is just a cheatsheet to remind me of some commonly used
-# commands. I'm generally executing these on OSX with up-to-date gnu binaries
-# on the PATH, or on Ubuntu, or on WindowsXP/7 with Cygwin binaries foremost on
-# the PATH.
+# This Makefile is just a cheatsheet of some commonly used commands.
+#
+# I've generally been executing these on:
+# * Ubuntu,
+# * OSX with up-to-date gnu binaries on the PATH,
+# * WindowsXP/7 with Cygwin binaries foremost on the PATH.
 
 # virtualenv
 
@@ -15,9 +17,12 @@ download-deps:
 	rm deps/PROJNAME-*
 
 popve:
-	pip install -r requirements.txt --no-index --find-links=deps
-	pip install -r requirements-dev.txt
-
+	# For applications:
+	#pip install -r requirements.txt --no-index --find-links=deps
+	#pip install -r requirements-dev.txt
+	# For libraries:
+	#pip install -e .
+	#pip install -e ".[dev]"
 
 # development
 

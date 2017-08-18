@@ -1,3 +1,7 @@
+# Application's dependencies, pinned tightly.
+# Install with 'pip install -r requirements.txt'
+docopt==0.6.1
+
 # Use the 'install_requires' setting from setup.py:
 -e .
 

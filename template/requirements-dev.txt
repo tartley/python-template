@@ -2,6 +2,5 @@
 -r requirements.txt
 
 # Development tools, unpinned:
-PyInstaller==3.0.dev7
-pytest==2.8.1
+pytest==3.2.1
 
