@@ -8,21 +8,22 @@
 # virtualenv
 
 ve:
-	# Make can't execute 'mkvirtualenv', 'cos we don't use interactive shell.
+	# Make can't create your virtualenv,
+	# by executing 'mkvirtualenv', 'cos we don't use interactive shell.
 	# So execute it yourself:
-	# mkvirtualenv -p $(which python3.4) -a . -r requirements-dev.txt PROJNAME
+	# mkvirtualenv -p $(which python3.4) -a . -r requirements/dev.in PROJNAME
 
 download-deps:
-	pip install -r requirements.txt --download=deps
+	pip install -r requirements/default.in --download=deps
 	rm deps/PROJNAME-*
 
-popve:
-	# For applications:
-	#pip install -r requirements.txt --no-index --find-links=deps
-	#pip install -r requirements-dev.txt
-	# For libraries:
-	#pip install -e .
-	#pip install -e ".[dev]"
+pop-app-ve:
+	pip install -r requirements/default.in --no-index --find-links=deps
+	pip install -r requirements/dev.in
+
+pop-lib-ve:
+	pip install -e .
+	pip install -e ".[dev]"
 
 # development
 
