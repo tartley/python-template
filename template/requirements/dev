@@ -1,0 +1,6 @@
+# App dependencies:
+-r app
+
+# Development tools:
+pytest==3.2.1
+

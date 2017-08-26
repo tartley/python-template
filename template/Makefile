@@ -11,15 +11,15 @@ ve:
 	# Make can't create your virtualenv,
 	# by executing 'mkvirtualenv', 'cos we don't use interactive shell.
 	# So execute it yourself:
-	# mkvirtualenv -p $(which python3.4) -a . -r requirements/dev.in PROJNAME
+	# mkvirtualenv -p $(which python3.4) -a . -r requirements/dev PROJNAME
 
 download-deps:
-	pip install -r requirements/default.in --download=deps
+	pip install -r requirements/app --download=deps
 	rm deps/PROJNAME-*
 
 pop-app-ve:
-	pip install -r requirements/default.in --no-index --find-links=deps
-	pip install -r requirements/dev.in
+	pip install -r requirements/app --no-index --find-links=deps
+	pip install -r requirements/dev
 
 pop-lib-ve:
 	pip install -e .

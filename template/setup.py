@@ -15,9 +15,9 @@ from setuptools import setup, find_packages
 
 NAME = 'PROJNAME'
 
-# Library dependencies, as loosely pinned as possible:
-# Install with `pip install -e ."
+# This app's dependencies:
 INSTALL_REQUIRES = [
+    'docopt==0.6.2',
 ]
 
 def read_description(filename):

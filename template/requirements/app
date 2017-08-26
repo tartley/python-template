@@ -1,0 +1,4 @@
+# This source, in develop/editable mode.
+-e .
+# (This also installs anything under setup.py's 'install_requires')
+

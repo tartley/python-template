@@ -1,6 +1,0 @@
-# App dependencies:
--r requirements/default.txt
-
-# Development tools, unpinned:
-pytest==3.2.1
-
