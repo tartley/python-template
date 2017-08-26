@@ -1,0 +1,7 @@
+/build/
+/dist/
+*.py[oc]
+*.egg-info/
+__pycache__/
+/tags
+
