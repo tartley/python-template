@@ -23,7 +23,7 @@ fi
 
 # Search-and-replace in file content
 echo "Replacing file content:"
-command='grep -lr --exclude-dir .git "$SEARCH" .'
+command='grep -lr --exclude-dir .git "$SEARCH" template'
 for filename in $(eval $command); do
     echo "  $filename"
     sed -i s/$SEARCH/$REPLACE/g "$filename"
