@@ -1,6 +1,6 @@
 # App dependencies:
 -r app
 
-# Development tools:
+# Development tools, pinned:
 pytest==3.2.1
 

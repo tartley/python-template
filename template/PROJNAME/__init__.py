@@ -6,7 +6,7 @@ Short description.
 Usage:
     PROJNAME [options]
 
-    --help      Show this text.
+    --help -h   Show this text.
     --version   Print version number and exit.
 
 For details, see the README file.
