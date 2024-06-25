@@ -66,8 +66,5 @@ README duplication issue below.
 
 Can we eliminate the duplication between the README, and the top level package
 docstring, (which is output by pydoc and '--help'). Perhaps README should be
-generated from the docstring at build/release time? Simpler would be to make
-the README very minimal, and direct people to running the tool with -h. But
-that is at odds with putting docs online. Maybe generation of one from the
-other is inevitable then?
+generated from the docstring at build/release time?
 
